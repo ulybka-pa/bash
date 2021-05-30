@@ -22,3 +22,4 @@ rm -r plik1
 
 echo "1. Ścieżka względna do pliku file10:" >> plik1 | find $1 -name 'file10' -print >> plik1
 echo "2. Liczba plików zwykłych w katalogu $1:" >> plik1 | find $1 -type f | wc -l | tr -s " " >> plik1
+echo "3. Liczba plików źródłowych języka c++, których nazwa składa się z 'file' i trzech dowolnych znaków:" >> plik1 | find $1 -name "file???.cpp" | wc -l | tr -s " " >> plik1
